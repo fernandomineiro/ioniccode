@@ -1,5 +1,7 @@
 {
   "name": "leitor",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,3 +1,28 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bar code </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>Click Para scanear</h1>
+
+  <ion-button color="secondary" (click)="scanCode()">Scan Code</ion-button>
+  <!-- <button ion-button round (click)="scanCode()">Scan Code</button> -->
+
+  <div *ngIf="scannedData">
+    <p>Scanned Code Text : <b>{{scannedData['text']}}</b></p>
+    <p>Scanned Code Format : <b>{{scannedData['format']}}</b></p>
+  </div>
+
+
+
+  <h1>Click To Generate QR Code</h1>
+
+  <ion-input type="text" [(ngModel)]="encodeData"></ion-input>
+
+  <ion-button color="success" (click)="encodedText()">Encode Text</ion-button>
+
+
+</ion-content>
